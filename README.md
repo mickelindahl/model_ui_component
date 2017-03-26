@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/mickelindahl/model_ui_component.svg?branch=master)](https://travis-ci.org/mickelindahl/model_ui_component)
+[![Coverage Status](https://coveralls.io/repos/github/mickelindahl/model_ui_component/badge.svg?branch=master)](https://coveralls.io/github/mickelindahl/model_ui_component?branch=master)
+
 # Model ui component
 Simple library for working with models in the client, syncing with backend and
 viewing
@@ -26,7 +29,9 @@ one can defined how a each element in a row should be rendered
   - `url` {url} Model url for POST, PUT, GET and DELETE
   - `painters` {array} List with painter objects
     - `[].callback(data)` {function} [WITH `type=="callback"`] Function to render painter output
-    - `[].key` {string} Key which the output from the painter will be stored under
+      - `data` {object} model data object
+    - `[].data_key {string} Key to data object to use
+    - `[].name` {string} Key which the output from the painter will be stored under
     - `[].template` {string} [[WITH `type=="template"`] Template for handlebars where
     `data` will be input params at compilation
     - `[].type {string} plain | template | callback
@@ -40,7 +45,7 @@ upon the model data
 
 **Kind**: instance method of <code>[Model](#Model)</code>  
 ## Test
-`npm run-script test`
+`npm run-script test-local`
 
 For manual test run
 ```
