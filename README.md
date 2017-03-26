@@ -1,1 +1,56 @@
-# model_ui_component
+# Model ui component
+Simple library for working with models in the client, syncing with backend and
+viewing
+
+## Methods
+
+<a name="Model"></a>
+
+## Model
+**Kind**: global class  
+
+* [Model](#Model)
+    * [new Model()](#new_Model_new)
+    * [.row()](#Model+row) ⇒ <code>object</code>
+
+<a name="new_Model_new"></a>
+
+### new Model()
+Model that holds data from a single row in a database table. It knows
+how to create, update, fetch and delete it self. With painters objects
+one can defined how a each element in a row should be rendered
+
+- `options`
+  - `id` {string} Model identifier
+  - `data` {string} Model data
+  - `url` {url} Model url for POST, PUT, GET and DELETE
+  - `painters` {array} List with painter objects
+    - `[].callback(data)` {function} [WITH `type=="callback"`] Function to render painter output
+    - `[].key` {string} Key which the output from the painter will be stored under
+    - `[].template` {string} [[WITH `type=="template"`] Template for handlebars where
+    `data` will be input params at compilation
+    - `[].type {string} plain | template | callback
+
+<a name="Model+row"></a>
+
+### model.row() ⇒ <code>object</code>
+Crate and object with data as it should should be displayed in html.
+The composition of the object is set py a set of painters objects acting
+upon the model data
+
+**Kind**: instance method of <code>[Model](#Model)</code>  
+## Test
+`npm run-script test`
+
+For manual test run
+```
+node lib/test/manual/index.js
+```
+Then open `lib/test/manual/html/index.html` in a browser
+
+## Contributing
+In lieu of a formal styleguide, take care to maintain the
+existing coding style. Add unit tests for any new or changed
+functionality. Lint and test your code.
+
+## Release History

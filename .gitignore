@@ -1,0 +1,17 @@
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+# Ignore Idea stuff
+.idea
+
+# No manual test genereated data
+lib/test/manual/css
+lib/test/manual/js
+lib/test/manual/html
+
+# No coverage
+coverage.html
+
+# No npm debug log
+npm-debug.log
