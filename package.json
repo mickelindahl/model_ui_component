@@ -1,8 +1,8 @@
 {
   "name": "model-ui-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple library for working with models in the client, syncing with backend and",
-  "main": "index.js",
+  "main": "lib/index.js",
   "directories": {
     "test": "test"
   },
